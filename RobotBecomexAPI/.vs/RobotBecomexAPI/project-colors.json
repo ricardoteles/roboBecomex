@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "28547d45-a08b-4e97-b899-a818741d3824": {
+      "ProjectGuid": "28547d45-a08b-4e97-b899-a818741d3824",
+      "DisplayName": "RobotBecomexAPI",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    },
+    "65eb21ee-b840-4ea1-b52a-540142d7f176": {
+      "ProjectGuid": "65eb21ee-b840-4ea1-b52a-540142d7f176",
+      "DisplayName": "RobotBecomexAPITest",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

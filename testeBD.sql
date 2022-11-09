@@ -1,0 +1,25 @@
+---------------
+-- Questao 1 --
+---------------
+
+SELECT p.ID_PEDIDO, p.DATA_PEDIDO, c.NOME, SUM(i.PRECO_UNITARIO * i.QUANTIDADE) as VALOR_TOTAL
+FROM PEDIDO p
+INNER JOIN CLIENTE c ON p.ID_CLIENTE = c.ID_CLIENTE
+INNER JOIN ITEM_PEDIDO i ON p.ID_PEDIDO = i._IDPEDIDO
+WHERE YEAR(p.DATA_PEDIDO) = 2012
+ORDER BY p.DATA_PEDIDO ASC;
+
+---------------
+-- Questao 2 --
+---------------
+
+INSERT INTO PRODUTO(DESCRICAO, PRECO_UNITARIO)
+VALUES ("Smart TV", 1950.90);
+
+---------------
+-- Questao 3 --
+---------------
+
+UPDATE PRODUTO
+SET DESCRICAO = "Notebook"
+WHERE ID_PRODUTO = 10;
