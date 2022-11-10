@@ -1,0 +1,118 @@
+<div class="d-flex justify-content-center">
+    <div class="d-flex list-group w-50">
+        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                    <h3 class="mb-2">Mover o cotovelo</h3>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" #elbow type="radio" name="elbowChoose" checked (change)="onSelectedElbow('left')">
+                                <label class="form-check-label" for="elbowChoose">
+                                    Esquerdo
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" #elbow type="radio" name="elbowChoose" (change)="onSelectedElbow('right')">
+                                <label class="form-check-label" for="elbowChoose">
+                                    Direito
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <select class="form-select" #elbowStrenght (change)="onSelectedElbowStrenght(elbowStrenght.value)">
+                                <option selected value="1">Em Repouso</option>
+                                <option value="2">Levemente Contraído</option>
+                                <option value="3">Contraído</option>
+                                <option value="4">Fortemente Contraído</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" (click)="moveRobotElbow()">Mover</button>
+            </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                    <h3 class="mb-0">Rotacionar o pulso</h3>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="wristChoose" id="leftWrist" checked (change)="onSelectedWrist('left')">
+                                <label class="form-check-label" for="wristChoose">
+                                    Esquerdo
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="wristChoose" id="rightWrist" (change)="onSelectedWrist('right')">
+                                <label class="form-check-label" for="wristChoose">
+                                    Direito
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <select class="form-select" #wristRotation (change)="onSelectedWristRotation(wristRotation.value)">
+                                <option value="1">Rotação para -90º</option>
+                                <option value="2">Rotação para -45º</option>
+                                <option selected value="3">Em Repouso</option>
+                                <option value="4">Rotação para 45º</option>
+                                <option value="5">Rotação para 90º</option>
+                                <option value="6">Rotação para 135º</option>
+                                <option value="7">Rotação para 180º</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" (click)="rotateRobotWrist()">Mover</button>
+            </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                    <h3 class="mb-0">Rotacionar a cabeça</h3>
+                    <div class="row">
+                        <div class="col">
+                            <select class="form-select" #headRotation (change)="onSelectedHeadRotation(headRotation.value)">
+                                <option value="1">Rotação para -90º</option>
+                                <option value="2">Rotação para -45º</option>
+                                <option selected value="3">Em Repouso</option>
+                                <option value="4">Rotação para 45º</option>
+                                <option value="5">Rotação para 90º</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" (click)="rotateRobotHead()">Mover</button>
+            </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                    <h3 class="mb-0">Mover a cabeça</h3>
+                    <div class="row">
+                        <div class="col">
+                            <select class="form-select" #headInclination (change)="onSelectedHeadInclination(headInclination.value)">
+                                <option value="1">Para Cima</option>
+                                <option selected value="2">Em Repouso</option>
+                                <option value="3">Para Baixo
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" (click)="moveRobotHead()">Mover</button>
+            </div>
+        </a>
+
+        <h3>Informações atuais do robô</h3>
+        <div *ngIf="estadoAtualRobo">
+            <p>Inclinação da cabeça: {{estadoAtualRobo.robot.head.inclination}}</p>
+            <p>Rotação da cabeça: {{estadoAtualRobo.robot.head.rotation}}</p>
+            <p>Pulso esquerdo: {{estadoAtualRobo.robot.leftWrist.rotation}}</p>
+            <p>Pulso direito: {{estadoAtualRobo.robot.rightWrist.rotation}}</p>
+            <p>Cotovelo esquerdo: {{estadoAtualRobo.robot.leftElbow.strength}}</p>
+            <p>Cotovelo direito: {{estadoAtualRobo.robot.rightElbow.strength}}</p>
+        </div>
+    </div>
+</div>

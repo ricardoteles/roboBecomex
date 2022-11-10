@@ -3,7 +3,7 @@
 1. [Tecnologias utilizadas](#tecnologias)
 2. [Utilização](#utilizacao)
 
-## Instalando e configurando o Jenkins <a name="tecnologias"></a>
+## Tecnologias utilizadas <a name="tecnologias"></a>
 
 ### 1. Backend
 
@@ -35,8 +35,9 @@ Para executar o backend basta executá-lo com o auxílio do Visual Studio. Assim
 
 ### 2. Frontend
 
-Já o frontend está localizado no diretório robotBecomex e após instalar as ferramentas necessárias, basta subir o servidor do frontend pela linha de comando:
-**npm start**
+Já o frontend está localizado no diretório robotBecomex e após instalar as ferramentas necessárias, basta instalar as dependências utilizadas e subir o servidor do frontend pela linha de comando:
+- **npm install**
+- **npm start**
 
 A aplicação subirá na url http://localhost:4200/, onde será possível ver uma simples interface que controlará o robô.
 

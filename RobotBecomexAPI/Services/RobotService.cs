@@ -85,7 +85,7 @@ namespace RobotBecomexAPI.Services
             InclinationEnum headState = robot.Head.Inclination;
 
             if (headState == InclinationEnum.Down)
-                resp.ErrorMsg = "Só poderá Rotacionar a Cabeça caso sua Inclinação da Cabeça não esteja em estado Para Baixo.";
+                resp.ErrorMsg = "Só poderá Rotacionar a Cabeça caso sua Inclinação não esteja em estado Para Baixo.";
             else if (headState != InclinationEnum.Down && canMakeStateProgression((int)robot.Head.Rotation, state, resp))
                 robot.Head.Rotation = (RotationEnum)state;
 
