@@ -1,4 +1,4 @@
-# Estudo do Jenkins
+# Avaliação Becomex
 
 1. [Tecnologias utilizadas](#tecnologias)
 2. [Utilização](#utilizacao)
