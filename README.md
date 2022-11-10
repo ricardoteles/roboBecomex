@@ -41,4 +41,4 @@ Já o frontend está localizado no diretório robotBecomex e após instalar as f
 
 A aplicação subirá na url http://localhost:4200/, onde será possível ver uma simples interface que controlará o robô.
 
-![UI para controlar os braços e a cabeça do robô](url da img)
+![UI para controlar os braços e a cabeça do robô](frontend.png)
